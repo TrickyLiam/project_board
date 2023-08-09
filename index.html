@@ -9,24 +9,30 @@
   <main>
     <body>
       <h1>Project Board</h1>
+      <!-- <div id="container"> -->
+        <div id="projectEnter">
+          <label for="project"
+            >Enter a project name you'd like to work on:</label
+          >
+          <input type="text" id="project" name="project" />
+        </div>
 
-      <div id="projectEnter">
-        <label for="project">Enter a project name you'd like to work on:</label>
-        <input type="text" id="project" name="project" />
-      </div>
+        <div id="descriptionEnter">
+          <label for="description">Enter a description for the project:</label>
+          <input type="text" id="description" name="description" />
+        </div>
 
-      <div id="descriptionEnter">
-        <label for="description">Enter a description for the project:</label>
-        <input type="text" id="description" name="description" />
-      </div>
+        <div id="ratingEnter">
+          <label for="rating">
+            Select a difficulty rating for your project (1 "easy" - 10 "hard"):
+          </label>
+          <select name="rating" id="rating"></select>
+        </div>
 
-      <div id="ratingEnter">
-        <label for="rating">
-          Select a difficulty rating for your project (1 "easy" - 10 "hard"):
-        </label>
-        <select name="rating" id="rating" />
-      </div>
-
+        <div id="submitButton">
+          <input type="submit" value="Submit" id="button" />
+        </div>
+      <!-- </div> -->
       <script src="script.js"></script>
     </body>
   </main>
