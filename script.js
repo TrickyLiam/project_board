@@ -18,16 +18,21 @@ window.addEventListener("load", function () {
     e.preventDefault();
     
     const projectName = document.querySelector("input[name=project]").value;
-    const projectDescripton = document.querySelector("input[name=description]").value;
+    const projectDescription = document.querySelector("input[name=description]").value;
     const projectRating = Number(document.querySelector("select[name=rating]").value);
     
     
-    formValidation(projectName, projectDescripton, projectRating);
+    let isFormValid = formValidation(projectName, projectDescription, projectRating);
 
-    let cardToPush = { projectName, projectDescripton, projectRating };
-    cardSubmittedArr.push(cardToPush);
+    if (isFormValid) {
+      let cardToPush = {projectName, projectDescription, projectRating};
+      cardSubmittedArr.push(cardToPush);
+      renderCards(cardSubmittedArr);
+    }
+    
 
-    renderCards(cardSubmittedArr);
+    
+
     
   
     });

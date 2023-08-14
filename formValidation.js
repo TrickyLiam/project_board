@@ -5,9 +5,14 @@ export function formValidation (projectName, projectDescripton, projectRating) {
     
     if (projectRating === 0) {
         window.alert("Must select a difficulty rating!");
+        return false;
     } else if (!isDescriptionValid) {
         window.alert("Description must be entered and valid!");
+        return false;
     } else if (!isNameValid) {
         window.alert("Name must be entered and valid!");
+        return false;
+    } else {
+        return true;
     }
 }
