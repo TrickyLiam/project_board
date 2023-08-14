@@ -1,11 +1,13 @@
 import { formValidation } from "./formValidation.js";
 import { rating } from "./Rating.js";
+import { renderCards } from "./renderCards.js";
 
 window.addEventListener("load", function () {
   // const submitButton = document.getElementById("submitButton");
   const projectForm = document.querySelector("form");
   const boardContainer = document.getElementById("board-container");
   const ratingButton = document.getElementById("rating");
+  const cardSubmittedArr = [];
   
 
   ratingButton.addEventListener("click", (e) => {
@@ -19,25 +21,12 @@ window.addEventListener("load", function () {
     
     
     formValidation(projectName, projectDescripton, projectRating);
-      
-    boardContainer.innerHTML = `
-      <div id="board-container">
-      <h1>${projectName}</h1>
-      <p>${projectDescripton}</p>
-      <p>${projectRating}</p>
-      </div>
-      `;
-      
-    //   const newDiv = document.createElement("div");
-    //   newDiv.innerHTML = `
-    //   <div id="board-container">
-    //   <h1>${projectName}</h1>
-    //   <p>${projectDescripton}</p>
-    //   <p>${projectRating}</p>
-    //  </div>
-    //  `;
-      
-    // boardContainer.appendChild(newDiv);
+
+    let cardToPush = [projectName, projectDescripton, projectRating];
+    cardSubmittedArr.push(cardToPush);
+
+    renderCards();
+    
     e.preventDefault();
    
   });

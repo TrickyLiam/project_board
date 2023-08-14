@@ -1,4 +1,4 @@
-export const formValidation = (projectName, projectDescripton, projectRating) => {
+export function formValidation (projectName, projectDescripton, projectRating) {
 
     const isNameValid = /^[A-Za-z0-9_.]+$/.test(projectName);
     const isDescriptionValid = /^[A-Za-z0-9_.]+$/.test(projectDescripton);
