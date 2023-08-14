@@ -15,7 +15,13 @@ window.addEventListener("load", function () {
     },
     { once: true }
   );
-
+  // const deleteBtn= document.getElementById("delete-btn");
+  // const boardContainer = document.getElementById("board-container");
+  
+  
+  // deleteBtn.addEventListener("click", function() {
+  //   boardContainer.remove();
+  // })
   projectForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -36,8 +42,8 @@ window.addEventListener("load", function () {
       let cardToPush = { projectName, projectDescripton, projectRating };
       cardSubmittedArr.push(cardToPush);
       renderCards(cardSubmittedArr);
-      
     }
-
   });
+
+
 });
