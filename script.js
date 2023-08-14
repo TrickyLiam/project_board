@@ -24,7 +24,7 @@ window.addEventListener("load", function () {
     
     formValidation(projectName, projectDescripton, projectRating);
 
-    let cardToPush = [projectName, projectDescripton, projectRating];
+    let cardToPush = { projectName, projectDescripton, projectRating };
     cardSubmittedArr.push(cardToPush);
 
     renderCards(cardSubmittedArr);
