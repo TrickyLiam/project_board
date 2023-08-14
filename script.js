@@ -15,6 +15,8 @@ window.addEventListener("load", function () {
 }, { once: true });
 
   projectForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    
     const projectName = document.querySelector("input[name=project]").value;
     const projectDescripton = document.querySelector("input[name=description]").value;
     const projectRating = Number(document.querySelector("select[name=rating]").value);
@@ -25,9 +27,8 @@ window.addEventListener("load", function () {
     let cardToPush = [projectName, projectDescripton, projectRating];
     cardSubmittedArr.push(cardToPush);
 
-    renderCards();
+    renderCards(cardSubmittedArr);
     
-    e.preventDefault();
-   
-  });
+  
+    });
   });

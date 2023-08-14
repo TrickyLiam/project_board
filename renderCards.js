@@ -1,21 +1,16 @@
-export function renderCards() {
-    
-    boardContainer.innerHTML = `
-      <div id="board-container">
-      <h1>${projectName}</h1>
-      <p>${projectDescripton}</p>
-      <p>${projectRating}</p>
-      </div>
+export function renderCards(arr) {
+    const boardContainer = document.getElementById("board-container");
+
+    boardContainer.innerHTML = '';
+    arr.forEach(card => {
+      const cardElement = document.createElement("div");
+      cardElement.classList.add("card");
+      cardElement.innerHTML = `
+        <h1>${card.projectName}</h1>
+        <p>${card.projectDescription}</p>
+        <p>${card.projectRating}</p>
       `;
-      
-      //   const newDiv = document.createElement("div");
-      //   newDiv.innerHTML = `
-      //   <div id="board-container">
-      //   <h1>${projectName}</h1>
-      //   <p>${projectDescripton}</p>
-      //   <p>${projectRating}</p>
-      //  </div>
-      //  `;
-      
-      // boardContainer.appendChild(newDiv);
-    }
+      boardContainer.appendChild(cardElement);
+    });
+  }
+    
