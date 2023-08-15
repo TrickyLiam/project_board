@@ -1,7 +1,7 @@
-export function formValidation (projectName, projectDescripton, projectRating) {
+export function formValidation (projectName, projectDescription, projectRating) {
 
     const isNameValid = /^[A-Za-z0-9_.]+$/.test(projectName);
-    const isDescriptionValid = /^[A-Za-z0-9_.]+$/.test(projectDescripton);
+    const isDescriptionValid = /^[A-Za-z0-9_.]+$/.test(projectDescription);
     
     if (projectRating === 0) {
         window.alert("Must select a difficulty rating!");

@@ -37,9 +37,5 @@ window.addEventListener("load", function () {
     }
     
 
-    
-
-    
-  
     });
   });
