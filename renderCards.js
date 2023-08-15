@@ -1,5 +1,5 @@
 export function renderCards(arr) {
-    const boardContainer = document.getElementById("board-container");
+  const boardContainer = document.getElementById("board-container");
 
   boardContainer.innerHTML = "";
   arr.forEach((card) => {
@@ -15,7 +15,7 @@ export function renderCards(arr) {
         <p>${card.projectDescription}</p>
         <p>${card.projectRating}</p>
       `;
-      boardContainer.appendChild(cardElement);
-    });
-  }
-    
+    boardContainer.appendChild(cardElement);
+  });
+}
+// button deletes it from view but saves in memory so if user resubmits card itll populate two instead of one if one was already filled out. will need to fix.
