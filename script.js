@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
   // const submitButton = document.getElementById("submitButton");
   const projectForm = document.querySelector("form");
   const ratingButton = document.getElementById("rating");
-  let cardSubmittedArr = [];
+  const cardSubmittedArr = [];
 
   ratingButton.addEventListener(
     "click",
@@ -15,11 +15,6 @@ window.addEventListener("load", function () {
     },
     { once: true }
   );
-
-  // const del = document.getElementById("delete-btn");
-  // del.addEventListener("click", function(){
-  //   console.log("clicked")
-  // })
   // const deleteBtn= document.getElementById("delete-btn");
   // const boardContainer = document.getElementById("board-container");
 
@@ -37,12 +32,11 @@ window.addEventListener("load", function () {
       document.querySelector("select[name=rating]").value
     );
 
-    let isFormValid = formValidation(
+    const isFormValid = formValidation(
       projectName,
       projectDescription,
       projectRating
     );
-
     if (isFormValid) {
       let cardToPush = { projectName, projectDescription, projectRating };
       cardSubmittedArr.push(cardToPush);
