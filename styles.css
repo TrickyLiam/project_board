@@ -45,12 +45,15 @@ div {
 }
 
 #button:hover {
-  background-color: #4f004f;
+   background-color: #4f004f;
 }
+
 #delete-btn {
-    
-    width:20px;
-    height:20px;
-    border-radius: 60%;
-    object-fit:contain;
+    border: none;
+    background-color: transparent;
+}
+
+svg {
+  height: 20px;
+  width: auto;
 }
