@@ -47,3 +47,13 @@ div{
 #button:hover {
    background-color: #4f004f;
 }
+
+#delete-btn {
+    border: none;
+    background-color: transparent;
+}
+
+svg {
+  height: 20px;
+  width: auto;
+}

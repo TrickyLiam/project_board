@@ -8,12 +8,18 @@ window.addEventListener("load", function () {
   const boardContainer = document.getElementById("board-container");
   const ratingButton = document.getElementById("rating");
   const cardSubmittedArr = [];
-  
 
   ratingButton.addEventListener("click", (e) => {
-    rating();
-}, { once: true });
-
+      rating();
+    }, { once: true }
+  );
+  // const deleteBtn= document.getElementById("delete-btn");
+  // const boardContainer = document.getElementById("board-container");
+  
+  
+  // deleteBtn.addEventListener("click", function() {
+  //   boardContainer.remove();
+  // })
   projectForm.addEventListener("submit", function (e) {
     e.preventDefault();
     
