@@ -57,4 +57,5 @@ div {
 svg {
   height: 20px;
   width: auto;
+  pointer-events: none;
 }
