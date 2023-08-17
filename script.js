@@ -37,10 +37,38 @@ window.addEventListener("load", function () {
       projectDescription,
       projectRating
     );
+
     if (isFormValid) {
       let cardToPush = { projectName, projectDescription, projectRating };
+
       cardSubmittedArr.push(cardToPush);
       renderCards(cardSubmittedArr);
+    }
+  });
+
+  // const del = document.getElementsByClassName(".delete-btn");
+  // del.addEventListener("click", function(card) {
+  // let index = cardSubmittedArr.indexOf(card.projectName)
+  // console.log(index);
+  // cardSubmittedArr.splice(index,1);
+  // });
+  // })
+  // del.forEach(function (check) {
+  //   check.addEventListener("click", function () {
+  //     let index = cardSubmittedArr.findIndex(project => project.projectName == projectName);
+  //     cardSubmittedArr.splice(index,1);
+  //     console.log("clicked")
+  //   });
+  // });
+  // let projName = cardSubmittedArr.forEach((card) => card.projectName);
+
+  const boardContainer = document.getElementById("board-container");
+  boardContainer.addEventListener("click", function (e) {
+    if (e.target.classList.contains("delete-btn")) {
+      let index = cardSubmittedArr.findIndex(
+        (projName) => this.projName == projName
+      );
+      cardSubmittedArr.splice(index, 1);
     }
   });
 });
