@@ -10,8 +10,8 @@ window.addEventListener("load", function () {
   const cardSubmittedArr = [];
 
   ratingButton.addEventListener("click", (e) => {
-      rating();
-    }, { once: true }
+    rating();
+  }, { once: true }
   );
   // const deleteBtn= document.getElementById("delete-btn");
   // const boardContainer = document.getElementById("board-container");
@@ -31,11 +31,18 @@ window.addEventListener("load", function () {
     let isFormValid = formValidation(projectName, projectDescription, projectRating);
 
     if (isFormValid) {
-      let cardToPush = {projectName, projectDescription, projectRating};
+      let cardToPush = { projectName, projectDescription, projectRating };
       cardSubmittedArr.push(cardToPush);
       renderCards(cardSubmittedArr);
     }
-    
+  });
+  
+  // const deleteButton = document.getElementsByClassName(".delete-btn");
+  boardContainer.addEventListener("click", function (e) {
+    console.log("outside the button");
+    if (e.target.classList.contains("delete-btn")) {
+      console.log("hit the delete");
+    }
+  });
 
-    });
   });
