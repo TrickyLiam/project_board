@@ -48,7 +48,7 @@ div{
    background-color: #4f004f;
 }
 
-#delete-btn {
+.delete-btn {
     border: none;
     background-color: transparent;
 }
@@ -56,4 +56,6 @@ div{
 svg {
   height: 20px;
   width: auto;
+  pointer-events: none;
 }
+

@@ -22,11 +22,12 @@ window.addEventListener("load", function () {
   // })
   projectForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    
+
+   
     const projectName = document.querySelector("input[name=project]").value;
     const projectDescription = document.querySelector("input[name=description]").value;
     const projectRating = Number(document.querySelector("select[name=rating]").value);
-    
+  
     
     let isFormValid = formValidation(projectName, projectDescription, projectRating);
 
@@ -38,10 +39,13 @@ window.addEventListener("load", function () {
   });
   
   // const deleteButton = document.getElementsByClassName(".delete-btn");
+
   boardContainer.addEventListener("click", function (e) {
-    console.log("outside the button");
     if (e.target.classList.contains("delete-btn")) {
-      console.log("hit the delete");
+      let index = cardSubmittedArr.findIndex(
+        (projName) => this.projName == projName
+      );
+      cardSubmittedArr.splice(index, 1);
     }
   });
 
