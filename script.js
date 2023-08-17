@@ -65,7 +65,7 @@ window.addEventListener("load", function () {
   const boardContainer = document.getElementById("board-container");
   boardContainer.addEventListener("click", function (e) {
     if (e.target.classList.contains("delete-btn")) {
-      let index = cardSubmittedArr.findIndex(
+      const index = cardSubmittedArr.findIndex(
         (projName) => this.projName == projName
       );
       cardSubmittedArr.splice(index, 1);
