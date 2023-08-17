@@ -24,34 +24,43 @@ div {
   padding: 1%;
 }
 
-/* #container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: red;
-} */
 
-#submitButton {
+#board-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
+  padding:0px;
+  margin: 0px;
+
+}
+.card {
+  padding:0.2rem;
+  margin:1.0rem;
+  background-color: #4f004f;
+}
+
+#resetBtn {
+float: right;
 }
 
 #button {
-  background-color: #a402a4;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #cc18cc;
   border-radius: 0.75rem;
-  padding: 0.5rem;
-  margin-top: 2%;
+  padding: 0.2rem,0.4rem,0.4rem,0.3rem;
+  color:rgb(0, 0, 0)
 }
 
+
+
 #button:hover {
-   background-color: #4f004f;
+  background-color: #4f004f;
 }
 
 .delete-btn {
-   
-   border: none;
-   background-color: transparent;
+  border: none;
+  background-color: transparent;
 }
 
 svg {
