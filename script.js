@@ -5,12 +5,13 @@ import { renderCards } from "./renderCards.js";
 window.addEventListener("load", function () {
   // const submitButton = document.getElementById("submitButton");
   const projectForm = document.querySelector("form");
+  const boardContainer = document.getElementById("board-container");
   const ratingButton = document.getElementById("rating");
   const cardSubmittedArr = [];
 
   ratingButton.addEventListener("click", (e) => {
-      rating();
-    }, { once: true }
+    rating();
+  }, { once: true }
   );
   // const deleteBtn= document.getElementById("delete-btn");
   // const boardContainer = document.getElementById("board-container");
@@ -22,18 +23,31 @@ window.addEventListener("load", function () {
   projectForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    
+   
     const projectName = document.querySelector("input[name=project]").value;
     const projectDescription = document.querySelector("input[name=description]").value;
     const projectRating = Number(document.querySelector("select[name=rating]").value);
-    
+  
     
     let isFormValid = formValidation(projectName, projectDescription, projectRating);
 
     if (isFormValid) {
-      let cardToPush = {projectName, projectDescription, projectRating};
+      let cardToPush = { projectName, projectDescription, projectRating };
       cardSubmittedArr.push(cardToPush);
       renderCards(cardSubmittedArr);
     }
   });
-});
+  
+  // const deleteButton = document.getElementsByClassName(".delete-btn");
+
+  boardContainer.addEventListener("click", function (e) {
+    if (e.target.classList.contains("delete-btn")) {
+      let index = cardSubmittedArr.findIndex(
+        (projName) => this.projName == projName
+      );
+      cardSubmittedArr.splice(index, 1);
+    }
+  });
+
+  });
+
