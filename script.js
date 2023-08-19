@@ -3,7 +3,6 @@ import { rating } from "./Rating.js";
 import { renderCards } from "./renderCards.js";
 
 window.addEventListener("load", function () {
-  // const submitButton = document.getElementById("submitButton");
   const projectForm = document.querySelector("form");
   const boardContainer = document.getElementById("board-container");
   const ratingButton = document.getElementById("rating");
@@ -13,13 +12,7 @@ window.addEventListener("load", function () {
     rating();
   }, { once: true }
   );
-  // const deleteBtn= document.getElementById("delete-btn");
-  // const boardContainer = document.getElementById("board-container");
   
-  
-  // deleteBtn.addEventListener("click", function() {
-  //   boardContainer.remove();
-  // })
   projectForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -38,14 +31,24 @@ window.addEventListener("load", function () {
     }
   });
   
-  // const deleteButton = document.getElementsByClassName(".delete-btn");
-
   boardContainer.addEventListener("click", function (e) {
     if (e.target.classList.contains("delete-btn")) {
       let index = cardSubmittedArr.findIndex(
         (projName) => this.projName == projName
       );
       cardSubmittedArr.splice(index, 1);
+    }
+  });
+
+  boardContainer.addEventListener("click", function (e) {
+    if (e.target.classList.contains("edit-btn")) {
+      boardContainer.contentEditable = true;
+    }
+  });
+
+  boardContainer.addEventListener("click", function (e) {
+    if (e.target.classList.contains("done-btn")) {
+      boardContainer.contentEditable = false;
     }
   });
 

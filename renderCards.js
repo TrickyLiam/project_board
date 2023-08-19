@@ -29,12 +29,16 @@ export function renderCards(arr) {
     </g>
     </svg>
     </button>
+
+    <button type="button" class="done-btn"> Done </button>
+    
     <h1>${card.projectName}</h1>
     <p>${card.projectDescription}</p>
     <p>${card.projectRating}</p>
       `;
       
       boardContainer.appendChild(cardElement);
-    });
+  });
+  
   }
     
