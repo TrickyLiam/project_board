@@ -53,6 +53,21 @@ div{
     background-color: transparent;
 }
 
+.delete-btn:hover {
+    background-color: #4a4a4a;
+    border-radius: 10px;
+}
+
+.edit-btn{
+    border: none;
+    background-color: transparent;
+}
+
+.edit-btn:hover {
+    background-color: #4a4a4a;
+    border-radius: 10px;
+}
+
 svg {
   height: 20px;
   width: auto;
