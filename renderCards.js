@@ -5,6 +5,7 @@ export function renderCards(arr) {
   arr.forEach((card) => {
     const cardElement = document.createElement("div");
     cardElement.classList.add("card");
+    cardElement.style.display = "inline-block";
     cardElement.innerHTML = `
     <button type="button" class="delete-btn" onclick="this.parentNode.remove()">
     <svg width="10" height="10" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
