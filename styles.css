@@ -68,6 +68,16 @@ div{
     border-radius: 10px;
 }
 
+.done-btn{
+    border: none;
+    background-color: transparent;
+}
+
+.done-btn:hover {
+    background-color: #4a4a4a;
+    border-radius: 10px;
+}
+
 svg {
   height: 20px;
   width: auto;
