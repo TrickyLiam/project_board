@@ -66,9 +66,10 @@ window.addEventListener("load", function () {
   boardContainer.addEventListener("click", function (e) {
     if (e.target.classList.contains("delete-btn")) {
       const index = cardSubmittedArr.findIndex(
-        (projName) => this.projName == projName
+        (projName) => this.projectName == projName
       );
       cardSubmittedArr.splice(index, 1);
+      
     }
   });
 });
