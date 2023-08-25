@@ -34,6 +34,7 @@ div{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 #button {
@@ -41,6 +42,13 @@ div{
    border-radius: .75rem;
    padding: .5rem;
    margin-top: 2%;
+   
+}
+#button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 
