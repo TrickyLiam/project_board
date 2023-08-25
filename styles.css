@@ -22,7 +22,9 @@ div{
     text-align: left;
     padding: 1%;
 }
-
+h1 {
+    text-align: center;
+}
 /* #container {
     display: flex;
     flex-direction: column;
